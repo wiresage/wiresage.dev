@@ -7,5 +7,5 @@ services:
     build: .
     image: wiresage-dev
     ports:
-      - "${PORT:-8080}:8080"
+      - "${PORT:-8089}:8080"
     restart: unless-stopped
