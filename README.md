@@ -11,6 +11,9 @@ Source for the [WireSage](https://github.com/wiresage) website: one static page 
 | `assets/` | Logo, icon, favicons and the 1200×630 social card, taken from the brand kit. |
 | `CNAME` | Custom domain (`wiresage.dev`) for GitHub Pages. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are, without Jekyll. |
+| `Dockerfile`, `nginx.conf` | nginx image that serves the site: non-root, port 8080, gzip and cache/security headers. |
+| `docker-compose.yml` | Runs that image. |
+| `.dockerignore` | Keeps `design/` and `.git` out of the Docker build. |
 | `design/` | Local design hand-off files. Git-ignored: not source, not deployed. |
 
 Fonts (Outfit, Source Serif 4, JetBrains Mono) load from Google Fonts.
@@ -21,6 +24,20 @@ Open `index.html` in a browser, or serve the folder:
 
 ```sh
 python -m http.server 8000
+```
+
+## Docker
+
+```sh
+docker compose up -d --build   # http://localhost:8080
+docker compose down
+```
+
+Another host port: `PORT=9000 docker compose up -d`. Without Compose:
+
+```sh
+docker build -t wiresage-dev .
+docker run --rm -p 8080:8080 wiresage-dev
 ```
 
 ## Deploy

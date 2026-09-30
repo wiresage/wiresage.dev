@@ -1,0 +1,5 @@
+# Keep these out of the build context. The Dockerfile copies the site files
+# explicitly, so design/ can never end up in the image.
+.git
+.claude
+design

@@ -1,0 +1,11 @@
+# docker compose up -d --build   ->   http://localhost:8080
+# Another host port: PORT=9000 docker compose up -d
+name: wiresage-dev
+
+services:
+  web:
+    build: .
+    image: wiresage-dev
+    ports:
+      - "${PORT:-8080}:8080"
+    restart: unless-stopped
