@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WireSage — open foundations for AI in networking and security</title>
+  <title>WireSage — coming soon</title>
   <meta name="description" content="WireSage is an open-source community building MCP servers, agents and evaluations that connect language models to networking and cybersecurity tools.">
   <meta name="theme-color" content="#faf9f5">
   <link rel="canonical" href="https://wiresage.dev/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WireSage">
-  <meta property="og:title" content="WireSage — open foundations for AI in networking and security">
+  <meta property="og:title" content="WireSage — coming soon">
   <meta property="og:description" content="Open foundations for AI in networking and cybersecurity.">
   <meta property="og:url" content="https://wiresage.dev/">
   <meta property="og:image" content="https://wiresage.dev/assets/og-image.png">
@@ -25,233 +25,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-  <script>
-    // Scroll reveal is opt-in: IntersectionObserver must exist and the visitor
-    // must not have asked for reduced motion. Otherwise everything is simply visible.
-    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches) document.documentElement.classList.add('js');
-  </script>
 </head>
 <body>
 
-<header class="wire">
-  <div class="wrap bar">
-    <a href="#top" aria-label="WireSage home"><svg class="logo" role="img" aria-label="wiresage" xmlns="http://www.w3.org/2000/svg" viewBox="-13.28 -122.77 557.85 162.45"><path fill="#141413" d="M33.72 0L22.44 0L0.72-57.96L16.56-57.96L30.72-15.84L25.92-15.72L40.44-57.96L51.84-57.96L66.36-15.72L61.56-15.84L75.72-57.96L91.56-57.96L69.96 0L58.56 0L43.92-40.08L48.36-40.08L33.72 0ZM111.72 0L95.88 0L95.88-57.96L111.72-57.96L111.72 0ZM103.80-67.32L103.80-67.32Q99.96-67.32 97.44-69.90Q94.92-72.48 94.92-76.32L94.92-76.32Q94.92-80.04 97.44-82.68Q99.96-85.32 103.80-85.32L103.80-85.32Q107.76-85.32 110.22-82.68Q112.68-80.04 112.68-76.32L112.68-76.32Q112.68-72.48 110.22-69.90Q107.76-67.32 103.80-67.32ZM138.96 0L123.24 0L123.24-57.96L138.96-57.96L138.96 0ZM138.96-32.04L138.96-32.04L132.84-36.12Q133.92-46.80 139.08-52.98Q144.24-59.16 153.96-59.16L153.96-59.16Q158.16-59.16 161.52-57.78Q164.88-56.40 167.64-53.28L167.64-53.28L157.80-42Q156.48-43.44 154.62-44.16Q152.76-44.88 150.36-44.88L150.36-44.88Q145.32-44.88 142.14-41.70Q138.96-38.52 138.96-32.04ZM196.92 1.20L196.92 1.20Q187.80 1.20 180.72-2.70Q173.64-6.60 169.50-13.44Q165.36-20.28 165.36-29.04L165.36-29.04Q165.36-37.68 169.38-44.46Q173.40-51.24 180.36-55.26Q187.32-59.28 195.84-59.28L195.84-59.28Q204.24-59.28 210.66-55.50Q217.08-51.72 220.74-45.18Q224.40-38.64 224.40-30.36L224.40-30.36Q224.40-28.80 224.22-27.18Q224.04-25.56 223.56-23.52L223.56-23.52L174.84-23.40L174.84-35.16L216.24-35.28L209.88-30.36Q209.64-35.52 208.02-39Q206.40-42.48 203.34-44.34Q200.28-46.20 195.84-46.20L195.84-46.20Q191.16-46.20 187.68-44.10Q184.20-42 182.34-38.22Q180.48-34.44 180.48-29.28L180.48-29.28Q180.48-24 182.46-20.10Q184.44-16.20 188.16-14.10Q191.88-12 196.80-12L196.80-12Q201.24-12 204.84-13.50Q208.44-15 211.08-18L211.08-18L220.32-8.76Q216.12-3.84 210.06-1.32Q204 1.20 196.92 1.20Z"></path><path fill="#c15f3c" d="M251.64 1.32L251.64 1.32Q246.72 1.32 241.98 0Q237.24-1.32 233.28-3.66Q229.32-6 226.44-9.36L226.44-9.36L235.80-18.84Q238.80-15.48 242.76-13.80Q246.72-12.12 251.52-12.12L251.52-12.12Q255.36-12.12 257.34-13.20Q259.32-14.28 259.32-16.44L259.32-16.44Q259.32-18.84 257.22-20.16Q255.12-21.48 251.76-22.38Q248.40-23.28 244.74-24.42Q241.08-25.56 237.72-27.42Q234.36-29.28 232.26-32.58Q230.16-35.88 230.16-41.16L230.16-41.16Q230.16-46.68 232.86-50.76Q235.56-54.84 240.60-57.12Q245.64-59.40 252.48-59.40L252.48-59.40Q259.68-59.40 265.50-56.88Q271.32-54.36 275.16-49.32L275.16-49.32L265.68-39.84Q263.04-43.08 259.74-44.52Q256.44-45.96 252.60-45.96L252.60-45.96Q249.12-45.96 247.26-44.88Q245.40-43.80 245.40-41.88L245.40-41.88Q245.40-39.72 247.50-38.52Q249.60-37.32 252.96-36.42Q256.32-35.52 259.98-34.38Q263.64-33.24 266.94-31.20Q270.24-29.16 272.34-25.80Q274.44-22.44 274.44-17.16L274.44-17.16Q274.44-8.64 268.32-3.66Q262.20 1.32 251.64 1.32ZM306.84 1.20L306.84 1.20Q298.92 1.20 292.56-2.76Q286.20-6.72 282.60-13.56Q279.00-20.40 279.00-28.92L279.00-28.92Q279.00-37.56 282.60-44.40Q286.20-51.24 292.56-55.20Q298.92-59.16 306.84-59.16L306.84-59.16Q313.08-59.16 318.00-56.64Q322.92-54.12 325.86-49.62Q328.80-45.12 329.04-39.48L329.04-39.48L329.04-18.60Q328.80-12.84 325.86-8.40Q322.92-3.96 318.00-1.38Q313.08 1.20 306.84 1.20ZM309.72-13.32L309.72-13.32Q316.32-13.32 320.40-17.70Q324.48-22.08 324.48-29.04L324.48-29.04Q324.48-33.60 322.62-37.14Q320.76-40.68 317.46-42.66Q314.16-44.64 309.72-44.64L309.72-44.64Q305.40-44.64 302.10-42.66Q298.80-40.68 296.94-37.14Q295.08-33.60 295.08-29.04L295.08-29.04Q295.08-24.36 296.94-20.82Q298.80-17.28 302.10-15.30Q305.40-13.32 309.72-13.32ZM339.24 0L323.64 0L323.64-15.60L326.16-29.76L323.64-43.68L323.64-57.96L339.24-57.96L339.24 0ZM375.00 25.68L375.00 25.68Q365.76 25.68 358.68 22.38Q351.60 19.08 347.40 13.08L347.40 13.08L357.36 3.12Q360.72 7.08 364.86 9.18Q369.00 11.28 374.88 11.28L374.88 11.28Q382.20 11.28 386.46 7.56Q390.72 3.84 390.72-2.76L390.72-2.76L390.72-17.28L393.36-30L390.84-42.72L390.84-57.96L406.44-57.96L406.44-3Q406.44 5.64 402.42 12.06Q398.40 18.48 391.32 22.08Q384.24 25.68 375.00 25.68ZM374.28-1.56L374.28-1.56Q366.48-1.56 360.24-5.34Q354.00-9.12 350.46-15.72Q346.92-22.32 346.92-30.48L346.92-30.48Q346.92-38.64 350.46-45.12Q354.00-51.60 360.24-55.38Q366.48-59.16 374.28-59.16L374.28-59.16Q380.76-59.16 385.74-56.64Q390.72-54.12 393.60-49.74Q396.48-45.36 396.72-39.48L396.72-39.48L396.72-21.24Q396.48-15.48 393.54-10.98Q390.60-6.48 385.62-4.02Q380.64-1.56 374.28-1.56ZM377.40-15.84L377.40-15.84Q381.72-15.84 384.90-17.70Q388.08-19.56 389.88-22.86Q391.68-26.16 391.68-30.36L391.68-30.36Q391.68-34.68 389.88-37.92Q388.08-41.16 384.90-43.02Q381.72-44.88 377.40-44.88L377.40-44.88Q373.08-44.88 369.84-43.02Q366.60-41.16 364.80-37.86Q363.00-34.56 363.00-30.36L363.00-30.36Q363.00-26.28 364.80-22.98Q366.60-19.68 369.84-17.76Q373.08-15.84 377.40-15.84ZM445.56 1.20L445.56 1.20Q436.44 1.20 429.36-2.70Q422.28-6.60 418.14-13.44Q414.00-20.28 414.00-29.04L414.00-29.04Q414.00-37.68 418.02-44.46Q422.04-51.24 429.00-55.26Q435.96-59.28 444.48-59.28L444.48-59.28Q452.88-59.28 459.30-55.50Q465.72-51.72 469.38-45.18Q473.04-38.64 473.04-30.36L473.04-30.36Q473.04-28.80 472.86-27.18Q472.68-25.56 472.20-23.52L472.20-23.52L423.48-23.40L423.48-35.16L464.88-35.28L458.52-30.36Q458.28-35.52 456.66-39Q455.04-42.48 451.98-44.34Q448.92-46.20 444.48-46.20L444.48-46.20Q439.80-46.20 436.32-44.10Q432.84-42 430.98-38.22Q429.12-34.44 429.12-29.28L429.12-29.28Q429.12-24 431.10-20.10Q433.08-16.20 436.80-14.10Q440.52-12 445.44-12L445.44-12Q449.88-12 453.48-13.50Q457.08-15 459.72-18L459.72-18L468.96-8.76Q464.76-3.84 458.70-1.32Q452.64 1.20 445.56 1.20Z"></path><g fill="none" stroke="#d97757" stroke-width="10.37" stroke-linecap="round"><path class="la la1" d="M482.18 -74.78A14.4 14.4 0 0 1 496.58 -60.38"></path><path class="la la2" d="M482.18 -89.18A28.8 28.8 0 0 1 510.98 -60.38"></path><path class="la la3" d="M482.18 -103.58A43.2 43.2 0 0 1 525.38 -60.38"></path></g></svg></a>
-    <nav aria-label="Primary">
-      <a href="#focus">Focus</a>
-      <a href="#method">Method</a>
-      <a href="#openness">Openness</a>
-      <a href="#contribute">Contribute</a>
-      <a class="gh" href="https://github.com/wiresage" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
-  </div>
+<header class="wrap bar wire">
+  <a href="/" aria-label="WireSage"><svg class="logo" role="img" aria-label="wiresage" xmlns="http://www.w3.org/2000/svg" viewBox="-13.28 -122.77 557.85 162.45"><path fill="#141413" d="M33.72 0L22.44 0L0.72-57.96L16.56-57.96L30.72-15.84L25.92-15.72L40.44-57.96L51.84-57.96L66.36-15.72L61.56-15.84L75.72-57.96L91.56-57.96L69.96 0L58.56 0L43.92-40.08L48.36-40.08L33.72 0ZM111.72 0L95.88 0L95.88-57.96L111.72-57.96L111.72 0ZM103.80-67.32L103.80-67.32Q99.96-67.32 97.44-69.90Q94.92-72.48 94.92-76.32L94.92-76.32Q94.92-80.04 97.44-82.68Q99.96-85.32 103.80-85.32L103.80-85.32Q107.76-85.32 110.22-82.68Q112.68-80.04 112.68-76.32L112.68-76.32Q112.68-72.48 110.22-69.90Q107.76-67.32 103.80-67.32ZM138.96 0L123.24 0L123.24-57.96L138.96-57.96L138.96 0ZM138.96-32.04L138.96-32.04L132.84-36.12Q133.92-46.80 139.08-52.98Q144.24-59.16 153.96-59.16L153.96-59.16Q158.16-59.16 161.52-57.78Q164.88-56.40 167.64-53.28L167.64-53.28L157.80-42Q156.48-43.44 154.62-44.16Q152.76-44.88 150.36-44.88L150.36-44.88Q145.32-44.88 142.14-41.70Q138.96-38.52 138.96-32.04ZM196.92 1.20L196.92 1.20Q187.80 1.20 180.72-2.70Q173.64-6.60 169.50-13.44Q165.36-20.28 165.36-29.04L165.36-29.04Q165.36-37.68 169.38-44.46Q173.40-51.24 180.36-55.26Q187.32-59.28 195.84-59.28L195.84-59.28Q204.24-59.28 210.66-55.50Q217.08-51.72 220.74-45.18Q224.40-38.64 224.40-30.36L224.40-30.36Q224.40-28.80 224.22-27.18Q224.04-25.56 223.56-23.52L223.56-23.52L174.84-23.40L174.84-35.16L216.24-35.28L209.88-30.36Q209.64-35.52 208.02-39Q206.40-42.48 203.34-44.34Q200.28-46.20 195.84-46.20L195.84-46.20Q191.16-46.20 187.68-44.10Q184.20-42 182.34-38.22Q180.48-34.44 180.48-29.28L180.48-29.28Q180.48-24 182.46-20.10Q184.44-16.20 188.16-14.10Q191.88-12 196.80-12L196.80-12Q201.24-12 204.84-13.50Q208.44-15 211.08-18L211.08-18L220.32-8.76Q216.12-3.84 210.06-1.32Q204 1.20 196.92 1.20Z"></path><path fill="#c15f3c" d="M251.64 1.32L251.64 1.32Q246.72 1.32 241.98 0Q237.24-1.32 233.28-3.66Q229.32-6 226.44-9.36L226.44-9.36L235.80-18.84Q238.80-15.48 242.76-13.80Q246.72-12.12 251.52-12.12L251.52-12.12Q255.36-12.12 257.34-13.20Q259.32-14.28 259.32-16.44L259.32-16.44Q259.32-18.84 257.22-20.16Q255.12-21.48 251.76-22.38Q248.40-23.28 244.74-24.42Q241.08-25.56 237.72-27.42Q234.36-29.28 232.26-32.58Q230.16-35.88 230.16-41.16L230.16-41.16Q230.16-46.68 232.86-50.76Q235.56-54.84 240.60-57.12Q245.64-59.40 252.48-59.40L252.48-59.40Q259.68-59.40 265.50-56.88Q271.32-54.36 275.16-49.32L275.16-49.32L265.68-39.84Q263.04-43.08 259.74-44.52Q256.44-45.96 252.60-45.96L252.60-45.96Q249.12-45.96 247.26-44.88Q245.40-43.80 245.40-41.88L245.40-41.88Q245.40-39.72 247.50-38.52Q249.60-37.32 252.96-36.42Q256.32-35.52 259.98-34.38Q263.64-33.24 266.94-31.20Q270.24-29.16 272.34-25.80Q274.44-22.44 274.44-17.16L274.44-17.16Q274.44-8.64 268.32-3.66Q262.20 1.32 251.64 1.32ZM306.84 1.20L306.84 1.20Q298.92 1.20 292.56-2.76Q286.20-6.72 282.60-13.56Q279.00-20.40 279.00-28.92L279.00-28.92Q279.00-37.56 282.60-44.40Q286.20-51.24 292.56-55.20Q298.92-59.16 306.84-59.16L306.84-59.16Q313.08-59.16 318.00-56.64Q322.92-54.12 325.86-49.62Q328.80-45.12 329.04-39.48L329.04-39.48L329.04-18.60Q328.80-12.84 325.86-8.40Q322.92-3.96 318.00-1.38Q313.08 1.20 306.84 1.20ZM309.72-13.32L309.72-13.32Q316.32-13.32 320.40-17.70Q324.48-22.08 324.48-29.04L324.48-29.04Q324.48-33.60 322.62-37.14Q320.76-40.68 317.46-42.66Q314.16-44.64 309.72-44.64L309.72-44.64Q305.40-44.64 302.10-42.66Q298.80-40.68 296.94-37.14Q295.08-33.60 295.08-29.04L295.08-29.04Q295.08-24.36 296.94-20.82Q298.80-17.28 302.10-15.30Q305.40-13.32 309.72-13.32ZM339.24 0L323.64 0L323.64-15.60L326.16-29.76L323.64-43.68L323.64-57.96L339.24-57.96L339.24 0ZM375.00 25.68L375.00 25.68Q365.76 25.68 358.68 22.38Q351.60 19.08 347.40 13.08L347.40 13.08L357.36 3.12Q360.72 7.08 364.86 9.18Q369.00 11.28 374.88 11.28L374.88 11.28Q382.20 11.28 386.46 7.56Q390.72 3.84 390.72-2.76L390.72-2.76L390.72-17.28L393.36-30L390.84-42.72L390.84-57.96L406.44-57.96L406.44-3Q406.44 5.64 402.42 12.06Q398.40 18.48 391.32 22.08Q384.24 25.68 375.00 25.68ZM374.28-1.56L374.28-1.56Q366.48-1.56 360.24-5.34Q354.00-9.12 350.46-15.72Q346.92-22.32 346.92-30.48L346.92-30.48Q346.92-38.64 350.46-45.12Q354.00-51.60 360.24-55.38Q366.48-59.16 374.28-59.16L374.28-59.16Q380.76-59.16 385.74-56.64Q390.72-54.12 393.60-49.74Q396.48-45.36 396.72-39.48L396.72-39.48L396.72-21.24Q396.48-15.48 393.54-10.98Q390.60-6.48 385.62-4.02Q380.64-1.56 374.28-1.56ZM377.40-15.84L377.40-15.84Q381.72-15.84 384.90-17.70Q388.08-19.56 389.88-22.86Q391.68-26.16 391.68-30.36L391.68-30.36Q391.68-34.68 389.88-37.92Q388.08-41.16 384.90-43.02Q381.72-44.88 377.40-44.88L377.40-44.88Q373.08-44.88 369.84-43.02Q366.60-41.16 364.80-37.86Q363.00-34.56 363.00-30.36L363.00-30.36Q363.00-26.28 364.80-22.98Q366.60-19.68 369.84-17.76Q373.08-15.84 377.40-15.84ZM445.56 1.20L445.56 1.20Q436.44 1.20 429.36-2.70Q422.28-6.60 418.14-13.44Q414.00-20.28 414.00-29.04L414.00-29.04Q414.00-37.68 418.02-44.46Q422.04-51.24 429.00-55.26Q435.96-59.28 444.48-59.28L444.48-59.28Q452.88-59.28 459.30-55.50Q465.72-51.72 469.38-45.18Q473.04-38.64 473.04-30.36L473.04-30.36Q473.04-28.80 472.86-27.18Q472.68-25.56 472.20-23.52L472.20-23.52L423.48-23.40L423.48-35.16L464.88-35.28L458.52-30.36Q458.28-35.52 456.66-39Q455.04-42.48 451.98-44.34Q448.92-46.20 444.48-46.20L444.48-46.20Q439.80-46.20 436.32-44.10Q432.84-42 430.98-38.22Q429.12-34.44 429.12-29.28L429.12-29.28Q429.12-24 431.10-20.10Q433.08-16.20 436.80-14.10Q440.52-12 445.44-12L445.44-12Q449.88-12 453.48-13.50Q457.08-15 459.72-18L459.72-18L468.96-8.76Q464.76-3.84 458.70-1.32Q452.64 1.20 445.56 1.20Z"></path><g fill="none" stroke="#d97757" stroke-width="10.37" stroke-linecap="round"><path class="la la1" d="M482.18 -74.78A14.4 14.4 0 0 1 496.58 -60.38"></path><path class="la la2" d="M482.18 -89.18A28.8 28.8 0 0 1 510.98 -60.38"></path><path class="la la3" d="M482.18 -103.58A43.2 43.2 0 0 1 525.38 -60.38"></path></g></svg></a>
+  <a href="https://github.com/wiresage" target="_blank" rel="noopener">GitHub ↗</a>
 </header>
 
-<main class="wrap" id="top">
-
-  <!-- Hero -->
-  <section class="sec hero">
-    <div class="rail">
-      <dl class="fm">
-        <dt>Kind</dt><dd>Open-source community</dd>
-        <dt>Focus</dt><dd>AI × networking × cybersecurity</dd>
-        <dt>Code</dt><dd>github.com/wiresage</dd>
-        <dt>License</dt><dd>Permissive, per repository</dd>
-        <dt>Status</dt><dd>Forming · open to contributors</dd>
-      </dl>
+<main class="wrap">
+  <div class="txt">
+    <div class="kick">wiresage.dev · in preparation</div>
+    <h1>Open foundations for AI in networking and security.</h1>
+    <p class="abs">WireSage is an open-source community building the shared tools, interfaces and evaluations for applying large language models to networking and cybersecurity: MCP servers, agents and scanners, developed in public. The site is still being written.</p>
+    <div class="ctas">
+      <a class="btn" href="https://github.com/wiresage" target="_blank" rel="noopener">Follow on GitHub ↗</a>
     </div>
-    <div class="body wide">
-      <div class="kick">wiresage.dev</div>
-      <h1>Open foundations for AI in networking and security.</h1>
-      <p class="abs"><span class="sc">Abstract.</span> WireSage is an open-source community developing the shared infrastructure for applying large language models to networking and cybersecurity: MCP servers, agents, scanners and automation, together with the evaluations that show whether they work. Code, design discussions and results are public and permissively licensed, with typed tools, safe defaults and documented behaviour that anyone can read, test and reproduce.</p>
-      <div class="kw">Keywords: open source · MCP · network automation · cybersecurity · LLM agents · reproducibility</div>
-      <div class="ctas">
-        <a class="btn" href="https://github.com/wiresage" target="_blank" rel="noopener">Browse the repositories ↗</a>
-        <a class="btn g" href="#method">Read the method</a>
-      </div>
-      <figure>
-        <div class="fig">
-          <div class="node"><i>Client</i><b>Language model</b><span>Claude, GPT or a local model, via any MCP client</span></div>
-          <div class="link"><div class="ln"><i class="pk"></i></div><span>MCP · JSON-RPC</span><small>typed tool calls</small></div>
-          <div class="node hl"><i>WireSage</i><b>Server</b><span>schemas · validation · scoped credentials · audit log</span></div>
-          <div class="link"><div class="ln"><i class="pk"></i></div><span>Device API / SSH</span><small>native operations</small></div>
-          <div class="node"><i>Target</i><b>Network &amp; security tools</b><span>routers · firewalls · scanners · logs</span></div>
-        </div>
-        <figcaption><b>Fig. 1</b> The pattern WireSage projects share. The model only sees typed tools and their results; credentials and sessions stay with the server, which turns each call into native, validated operations.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- §1 Motivation -->
-  <section class="sec">
-    <div class="rail"><div class="num">§1</div><h2>Motivation</h2></div>
-    <div class="body">
-      <p>Networks and security tools are documented in RFCs, vendor manuals and decades of CLI habit. Language models read all of it fluently, but reading is not operating, and neither is defending. Handing a model a raw shell on production infrastructure is neither safe nor reproducible.</p>
-      <p>Our working hypothesis is that the gap is an interface problem, not a model problem. Give models small, typed, well-described tools that mirror what a careful engineer would do, and they become useful colleagues instead of risky ones. WireSage exists to build those interfaces in public, and to measure whether they work.</p>
-      <p>Because the stakes are operational, the work has to be inspectable. An open foundation lets engineers, researchers and vendors audit the tools, rerun the experiments and disagree with the results.</p>
-    </div>
-  </section>
-
-  <!-- §2 Focus areas -->
-  <section class="sec" id="focus">
-    <div class="rail">
-      <div class="num">§2</div>
-      <h2>Focus areas</h2>
-      <div class="note">What the community is working on, and what is still an open call.</div>
-    </div>
-    <div class="body wide">
-      <div class="cap"><b>Table 1</b> Research and engineering areas.</div>
-      <div class="tblwrap">
-        <table>
-          <thead>
-            <tr><th scope="col">Area</th><th scope="col">Guiding question</th><th scope="col">Outputs</th><th scope="col">Status</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><b class="area">Network automation</b></td><td>Can a model change a live network as carefully as a good engineer?</td><td class="out">MCP servers · agents · change review</td><td><span class="tag">In progress</span></td></tr>
-            <tr><td><b class="area">Security operations</b></td><td>Can a model triage findings with evidence attached to every claim?</td><td class="out">Scanner integrations · triage agents</td><td><span class="tag">Open call</span></td></tr>
-            <tr><td><b class="area">Shared interfaces</b></td><td>Can one tool vocabulary span many vendors and platforms?</td><td class="out">Open schemas · reference servers</td><td><span class="tag">Open call</span></td></tr>
-            <tr><td><b class="area">Evaluation</b></td><td>How do we measure whether models operate networks well, and safely?</td><td class="out">Benchmarks · lab topologies · datasets</td><td><span class="tag">Open call</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 class="spaced"><span class="n">2.1</span>Open problems</h3>
-      <ul class="probs">
-        <li><span>P1</span><b>Vendor-neutral tools</b><p>One tool vocabulary shared across platforms, so an agent learns a task once.</p></li>
-        <li><span>P2</span><b>Change review</b><p>Agents that read a configuration diff, explain its blast radius and ask before applying it.</p></li>
-        <li><span>P3</span><b>Evidence-first scanning</b><p>Findings a model triages, with the raw output attached to every claim.</p></li>
-        <li><span>P4</span><b>Untrusted tool output</b><p>Logs, banners and packet captures are attacker-controlled input. How should tools sanitise what a model reads?</p></li>
-        <li><span>P5</span><b>Least-privilege agents</b><p>Scoped credentials, read-only by default, and an audit trail for every call.</p></li>
-        <li><span>P6</span><b>Reproducible evaluation</b><p>Open benchmarks and lab topologies that measure how well models actually operate networks.</p></li>
-      </ul>
-      <p class="cap">These are directions, not promises. Each one starts as a public discussion.</p>
-    </div>
-  </section>
-
-  <!-- §3 Method -->
-  <section class="sec" id="method">
-    <div class="rail">
-      <div class="num">§3</div>
-      <h2>Method</h2>
-      <div class="note">Design rules every WireSage project is held to.</div>
-    </div>
-    <div class="body wide">
-      <div class="meth">
-        <div><h3><span class="n">3.1</span>Typed tools, not raw shells</h3><p>Every capability is a named tool with a schema the server validates before anything reaches a device.</p></div>
-        <div><h3><span class="n">3.2</span>Reversible by default</h3><p>Risky changes run inside rollback-capable sessions where the platform allows it, so a lost connection undoes the change instead of locking you out.</p></div>
-        <div><h3><span class="n">3.3</span>Credentials stay local</h3><p>The model sees tool names and results. Passwords, keys and sessions never leave the server.</p></div>
-        <div><h3><span class="n">3.4</span>Small context, local-first</h3><p>Tool sets can be scoped by category, so smaller self-hosted models fit and nothing has to leave your network.</p></div>
-        <div><h3><span class="n">3.5</span>Documented and inspectable</h3><p>Every tool is listed in a public reference and can be called by hand, so behaviour can be checked, not assumed.</p></div>
-        <div><h3><span class="n">3.6</span>Threat model first</h3><p>Tool output is treated as untrusted input, and every project states what it assumes an attacker can do.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- §4 Openness -->
-  <section class="sec" id="openness">
-    <div class="rail">
-      <div class="num">§4</div>
-      <h2>Openness</h2>
-      <div class="note">Commitments we hold ourselves to, and welcome being held to.</div>
-    </div>
-    <div class="body">
-      <dl class="facts">
-        <dt>Code</dt><dd>Every repository is public under a permissive license.</dd>
-        <dt>Process</dt><dd>Issues, design discussions and roadmaps happen in the open.</dd>
-        <dt>Results</dt><dd>Evaluations publish their method, data and scripts so anyone can rerun them.</dd>
-        <dt>Security</dt><dd>Vulnerabilities are reported privately and disclosed responsibly. Tools default to read-only where they can.</dd>
-        <dt>Governance</dt><dd>Decisions are made in public by contributors. No single vendor owns the roadmap.</dd>
-        <dt>Independence</dt><dd>WireSage is not affiliated with any vendor whose tools its projects integrate.</dd>
-      </dl>
-    </div>
-  </section>
-
-  <!-- §5 Contribute -->
-  <section class="sec" id="contribute">
-    <div class="rail">
-      <div class="num">§5</div>
-      <h2>Contribute</h2>
-      <div class="note">Maintained by volunteers. Every contribution size counts.</div>
-    </div>
-    <div class="body">
-      <p>From a bug report with the platform version attached, to a new server for a tool we haven’t touched yet, to a lab topology for the benchmark: contributions are how this work moves forward.</p>
-      <ol class="steps">
-        <li><div><b>Use a project and report what breaks</b><p>Include the device or tool, its version and the exact tool call.</p></div></li>
-        <li><div><b>Pick up an issue</b><p>Look for <span class="mono reg">good first issue</span> labels across the organization.</p></div></li>
-        <li><div><b>Propose an integration or a question</b><p>Open a discussion describing the platform, its API and what “safe” means there.</p></div></li>
-      </ol>
-      <div class="ctas">
-        <a class="btn" href="https://github.com/wiresage" target="_blank" rel="noopener">github.com/wiresage ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- §6 Citing -->
-  <section class="sec" id="cite">
-    <div class="rail"><div class="num">§6</div><h2>Citing</h2></div>
-    <div class="body">
-      <p>If WireSage software or results support your research or teaching, please cite the organization and the specific repository you used.</p>
-<pre>@misc{wiresage,
-  author = {{WireSage contributors}},
-  title  = {WireSage: open-source tools connecting language
-            models to networking and security tooling},
-  year   = {2026},
-  url    = {https://wiresage.dev}
-}</pre>
-    </div>
-  </section>
-
+  </div>
+  <div class="art" aria-hidden="true"><svg viewBox="0 0 512 512" role="img" aria-label="WireSage mark"><g transform="translate(33.67 424.77) scale(3.6109)"><path fill="#c15f3c" d="M28.10 0L18.70 0L0.60-48.30L13.80-48.30L25.60-13.20L21.60-13.10L33.70-48.30L43.20-48.30L55.30-13.10L51.30-13.20L63.10-48.30L76.30-48.30L58.30 0L48.80 0L36.60-33.40L40.30-33.40L28.10 0Z"/><g fill="none" stroke="#d97757" stroke-width="8.64" stroke-linecap="round"><path class="a a1" d="M82.22 -62.32A12 12 0 0 1 94.22 -50.32"/><path class="a a2" d="M82.22 -74.32A24 24 0 0 1 106.22 -50.32"/><path class="a a3" d="M82.22 -86.32A36 36 0 0 1 118.22 -50.32"/></g></g></svg></div>
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <img src="assets/wiresage-icon-clay.svg" alt="">
-    <div>
-      <p>WireSage is an independent open-source community. It is not affiliated with any vendor whose tools its projects integrate.</p>
-      <small>© 2026 WireSage contributors · Permissive licenses, per repository · Set in Outfit, Source Serif 4 and JetBrains Mono</small>
-    </div>
-    <div class="fl">
-      <a href="https://github.com/wiresage" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a>
-    </div>
+  <div class="wrap">
+    <span>© 2026 WireSage contributors</span>
   </div>
 </footer>
-
-<script>
-  // Reveal sections as they scroll into view. Runs only when the head script
-  // set the .js class (see "Scroll reveal" in style.css).
-  (function () {
-    var d = document;
-    if (!d.documentElement.classList.contains('js')) return;
-
-    var targets = [];
-    function add(selector, stagger) {
-      d.querySelectorAll(selector).forEach(function (el, i) {
-        el.classList.add('rv');
-        if (stagger) el.style.transitionDelay = i * 80 + 'ms';
-        targets.push(el);
-      });
-    }
-
-    add('.sec:not(:first-of-type) .rail');
-    add('.sec:not(:first-of-type) .body');
-    add('.meth>div', 1);
-    add('.probs li', 1);
-    add('.steps li', 1);
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
-
-    targets.forEach(function (el) { io.observe(el); });
-  })();
-</script>
 
 </body>
 </html>
