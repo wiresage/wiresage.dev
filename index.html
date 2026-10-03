@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WireSage — open-source tools connecting AI to the network</title>
+  <title>WireSage — coming soon</title>
   <meta name="description" content="WireSage is an open-source organization connecting language models to network and security tools.">
   <meta name="theme-color" content="#faf9f5">
   <link rel="canonical" href="https://wiresage.dev/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WireSage">
-  <meta property="og:title" content="WireSage — open-source tools connecting AI to the network">
+  <meta property="og:title" content="WireSage — coming soon">
   <meta property="og:description" content="Open-source tools that connect language models to the network.">
   <meta property="og:url" content="https://wiresage.dev/">
   <meta property="og:image" content="https://wiresage.dev/assets/og-image.png">
@@ -25,196 +25,49 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="wrap bar">
-    <a href="#top" aria-label="WireSage home"><img src="assets/wiresage-lockup.svg" alt="wiresage"></a>
-    <nav aria-label="Primary">
-      <a href="#repositories">Repositories</a>
-      <a href="#method">Method</a>
-      <a href="#contribute">Contribute</a>
-      <a class="gh" href="https://github.com/wiresage" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
-  </div>
+<header class="wrap bar">
+  <a href="/" aria-label="WireSage"><img src="assets/wiresage-lockup.svg" alt="wiresage"></a>
+  <a href="https://github.com/wiresage" target="_blank" rel="noopener">GitHub ↗</a>
 </header>
 
-<main class="wrap" id="top">
-
-  <!-- Hero -->
-  <section class="sec">
-    <div class="rail">
-      <dl class="fm">
-        <dt>Kind</dt><dd>Open-source organization</dd>
-        <dt>Focus</dt><dd>AI × network &amp; security tools</dd>
-        <dt>Code</dt><dd>github.com/wiresage</dd>
-        <dt>License</dt><dd>MIT, per repository</dd>
-        <dt>Status</dt><dd>Active · open to contributors</dd>
-      </dl>
+<main class="wrap">
+  <div class="txt">
+    <div class="kick">wiresage.dev · in preparation</div>
+    <h1>Language models, grounded in the wire.</h1>
+    <p class="abs">WireSage is an open-source organization connecting large language models to the tools network and security engineers already trust: MCP servers, agents and scanners, built in public. The site is still being written. The code is already here.</p>
+    <dl class="fm">
+      <dt>Status</dt><dd>Site in preparation</dd>
+      <dt>Published</dt><dd><a href="https://github.com/wiresage/mikrotik-mcp" target="_blank" rel="noopener">mikrotik-mcp</a>, an MCP server for MikroTik RouterOS</dd>
+      <dt>License</dt><dd>MIT</dd>
+    </dl>
+    <div class="ctas">
+      <a class="btn" href="https://github.com/wiresage" target="_blank" rel="noopener">Follow on GitHub ↗</a>
+      <a class="btn g" href="https://github.com/wiresage/mikrotik-mcp" target="_blank" rel="noopener">Try mikrotik-mcp ↗</a>
     </div>
-    <div class="body wide">
-      <div class="kick">wiresage.dev</div>
-      <h1>Language models, grounded in the wire.</h1>
-      <p class="abs"><span class="sc">Abstract.</span> WireSage is an open-source organization building the interfaces between large language models and the tools network and security engineers already rely on: routers, firewalls, scanners and the protocols beneath them. We publish Model Context Protocol servers, agents and automation as permissively licensed code, with typed tools, documented behaviour and safe defaults that anyone can read, test and reproduce.</p>
-      <div class="kw">Keywords: MCP · network automation · RouterOS · LLM agents · security tooling</div>
-      <div class="ctas">
-        <a class="btn" href="https://github.com/wiresage" target="_blank" rel="noopener">Browse the repositories ↗</a>
-        <a class="btn g" href="#method">Read the method</a>
-      </div>
-      <figure>
-        <div class="fig">
-          <div class="node"><i>Client</i><b>Language model</b><span>Claude, GPT or a local model, via any MCP client</span></div>
-          <div class="link"><div class="ln"></div><span>MCP · JSON-RPC</span><small>typed tool calls</small></div>
-          <div class="node hl"><i>WireSage</i><b>Server</b><span>schemas · validation · safe mode · credentials</span></div>
-          <div class="link"><div class="ln"></div><span>SSH / device API</span><small>native operations</small></div>
-          <div class="node"><i>Network</i><b>Device</b><span>RouterOS today; more platforms proposed</span></div>
-        </div>
-        <figcaption><b>Fig. 1</b> The pattern every WireSage project follows. The model only ever sees typed tools and their results; credentials and device sessions stay with the server, which turns each call into native operations.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- §1 Motivation -->
-  <section class="sec">
-    <div class="rail"><div class="num">§1</div><h2>Motivation</h2></div>
-    <div class="body">
-      <p>Networks are described in RFCs, vendor manuals and decades of CLI habit. Language models read all of it fluently, but reading is not operating. Giving a model a raw shell on a production router is neither safe nor reproducible.</p>
-      <p>Our working hypothesis is that the gap is an interface problem, not a model problem. Give models small, typed, well-described tools that mirror what a careful engineer would do, and they become useful colleagues instead of risky ones. WireSage exists to build those interfaces in public, and to measure whether they work.</p>
-    </div>
-  </section>
-
-  <!-- §2 Repositories -->
-  <section class="sec" id="repositories">
-    <div class="rail">
-      <div class="num">§2</div>
-      <h2>Repositories</h2>
-      <div class="note">One published project so far. More start as open discussions.</div>
-    </div>
-    <div class="body wide">
-      <div class="cap"><b>Table 1</b> Published repositories.</div>
-      <div class="tblwrap">
-        <table>
-          <thead>
-            <tr><th scope="col">Repository</th><th scope="col">Scope</th><th scope="col">Interface</th><th scope="col">License</th><th scope="col">Status</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a class="mono" href="https://github.com/wiresage/mikrotik-mcp" target="_blank" rel="noopener">mikrotik-mcp</a></td>
-              <td>MCP server for MikroTik RouterOS: VLANs, firewall, NAT, DHCP, DNS, routes, WireGuard, queues, backups and more.</td>
-              <td><span class="spec"><span>14 categories</span><span>120+ operations</span><span>stdio · SSE · HTTP</span></span></td>
-              <td class="mono reg">MIT</td>
-              <td><span class="tag">Active</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="case">
-        <div class="case-text">
-          <h3><span class="n">2.1</span>mikrotik-mcp</h3>
-          <p>Lets any MCP-capable assistant manage a RouterOS device through typed tools such as <code class="mono reg">mikrotik_create_vlan_interface</code>, never through free-form commands.</p>
-          <dl class="facts">
-            <dt>Runtime</dt><dd>Python 3.8+, or Docker</dd>
-            <dt>Transports</dt><dd>stdio, SSE, streamable HTTP</dd>
-            <dt>Safety</dt><dd>RouterOS safe-mode sessions that auto-revert if management access is lost</dd>
-            <dt>Context</dt><dd>Scope tools per category with <code class="mono reg">--mcp.tools</code> for small local models</dd>
-          </dl>
-          <div class="ctas">
-            <a class="btn g" href="https://github.com/wiresage/mikrotik-mcp" target="_blank" rel="noopener">Repository ↗</a>
-            <a href="https://github.com/wiresage/mikrotik-mcp#readme" target="_blank" rel="noopener">Documentation ↗</a>
-          </div>
-        </div>
-<pre><span class="c"># Exercise every tool by hand with MCP Inspector</span>
-<span class="p">$</span> npx @modelcontextprotocol/inspector \
-    uvx mcp-server-mikrotik \
-    <span class="k">--host</span> 192.168.88.1 \
-    <span class="k">--username</span> admin \
-    <span class="k">--key-filename</span> ~/.ssh/mikrotik_ed25519</pre>
-      </div>
-
-      <h3 class="spaced"><span class="n">2.2</span>Open problems</h3>
-      <ul class="probs">
-        <li><span>P1</span><b>More network operating systems</b><p>Vendor-neutral MCP servers that share one tool vocabulary across platforms.</p></li>
-        <li><span>P2</span><b>Change review</b><p>Agents that read a configuration diff, explain its blast radius and ask before applying it.</p></li>
-        <li><span>P3</span><b>Evidence-first scanning</b><p>Scanners whose findings a model triages, with the raw output attached to every claim.</p></li>
-        <li><span>P4</span><b>Evaluation</b><p>Open benchmarks and lab topologies that measure how well models actually operate networks.</p></li>
-      </ul>
-      <p class="cap">These are directions, not promises. Each one starts as a public discussion.</p>
-    </div>
-  </section>
-
-  <!-- §3 Method -->
-  <section class="sec" id="method">
-    <div class="rail">
-      <div class="num">§3</div>
-      <h2>Method</h2>
-      <div class="note">Design rules every WireSage project is held to.</div>
-    </div>
-    <div class="body wide">
-      <div class="meth">
-        <div><h3><span class="n">3.1</span>Typed tools, not raw shells</h3><p>Every capability is a named tool with a schema the server validates before anything reaches a device.</p></div>
-        <div><h3><span class="n">3.2</span>Reversible by default</h3><p>Risky changes run inside safe-mode sessions or their equivalent, so a lost connection rolls back instead of locking you out.</p></div>
-        <div><h3><span class="n">3.3</span>Credentials stay local</h3><p>The model sees tool names and results. Passwords, keys and sessions never leave the server.</p></div>
-        <div><h3><span class="n">3.4</span>Small context, local-first</h3><p>Tool sets can be scoped by category, so smaller self-hosted models fit and nothing has to leave your network.</p></div>
-        <div><h3><span class="n">3.5</span>Documented and inspectable</h3><p>Every tool is listed in a public reference and can be called by hand, so behaviour can be checked, not assumed.</p></div>
-        <div><h3><span class="n">3.6</span>Open by default</h3><p>Code, issues, design discussions and roadmaps happen in public, under permissive licenses.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- §4 Contribute -->
-  <section class="sec" id="contribute">
-    <div class="rail">
-      <div class="num">§4</div>
-      <h2>Contribute</h2>
-      <div class="note">Maintained by volunteers. Every contribution size counts.</div>
-    </div>
-    <div class="body">
-      <p>From a bug report with a RouterOS version attached to a new server for a platform we haven’t touched yet, contributions are how this work moves forward.</p>
-      <ol class="steps">
-        <li><div><b>Use a project and report what breaks</b><p>Include the device model, OS version and the exact tool call.</p></div></li>
-        <li><div><b>Pick up an issue</b><p>Look for <span class="mono reg">good first issue</span> labels across the organization.</p></div></li>
-        <li><div><b>Propose an integration</b><p>Open a discussion describing the platform, its API and what “safe” means there.</p></div></li>
-      </ol>
-      <div class="ctas">
-        <a class="btn" href="https://github.com/wiresage" target="_blank" rel="noopener">github.com/wiresage ↗</a>
-        <a class="btn g" href="https://github.com/wiresage/mikrotik-mcp/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing guide ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- §5 Citing -->
-  <section class="sec" id="cite">
-    <div class="rail"><div class="num">§5</div><h2>Citing</h2></div>
-    <div class="body">
-      <p>If WireSage software supports your research or teaching, please cite the repository you used.</p>
-<pre>@software{wiresage_mikrotik_mcp,
-  author = {{WireSage contributors}},
-  title  = {mikrotik-mcp: a Model Context Protocol server for MikroTik RouterOS},
-  year   = {2026},
-  url    = {https://github.com/wiresage/mikrotik-mcp},
-  note   = {MIT License}
-}</pre>
-    </div>
-  </section>
-
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 512 512" role="img" aria-label="WireSage mark">
+      <g transform="translate(33.67 424.77) scale(3.611)">
+        <path fill="#c15f3c" d="M28.10 0L18.70 0L0.60-48.30L13.80-48.30L25.60-13.20L21.60-13.10L33.70-48.30L43.20-48.30L55.30-13.10L51.30-13.20L63.10-48.30L76.30-48.30L58.30 0L48.80 0L36.60-33.40L40.30-33.40L28.10 0Z"/>
+        <g fill="none" stroke="#d97757" stroke-width="8.64" stroke-linecap="round">
+          <path class="a a1" d="M82.22 -62.32A12 12 0 0 1 94.22 -50.32"/>
+          <path class="a a2" d="M82.22 -74.32A24 24 0 0 1 106.22 -50.32"/>
+          <path class="a a3" d="M82.22 -86.32A36 36 0 0 1 118.22 -50.32"/>
+        </g>
+      </g>
+    </svg>
+  </div>
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <img src="assets/wiresage-icon-clay.svg" alt="">
-    <div>
-      <p>WireSage is an independent open-source organization. It is not affiliated with MikroTik or any vendor whose tools its projects integrate.</p>
-      <small>© 2026 WireSage contributors · Code under MIT unless noted · Set in Outfit, Source Serif 4 and JetBrains Mono</small>
-    </div>
-    <div class="fl">
-      <a href="https://github.com/wiresage" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://github.com/wiresage/mikrotik-mcp" target="_blank" rel="noopener">mikrotik-mcp</a>
-      <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a>
-    </div>
+  <div class="wrap">
+    <span>© 2026 WireSage contributors</span>
+    <span>Independent open source · not affiliated with MikroTik</span>
   </div>
 </footer>
 

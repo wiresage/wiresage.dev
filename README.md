@@ -8,7 +8,7 @@ Source for the [WireSage](https://github.com/wiresage) website: one static page 
 | --- | --- |
 | `index.html` | The whole site. |
 | `style.css` | All styles. Colors and font stacks are the custom properties at the top. |
-| `assets/` | Logo, icon, favicons and the 1200×630 social card, taken from the brand kit. |
+| `assets/` | Logo, favicons and the 1200×630 social card, taken from the brand kit. |
 | `CNAME` | Custom domain (`wiresage.dev`) for GitHub Pages. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are, without Jekyll. |
 | `Dockerfile`, `nginx.conf` | nginx image that serves the site: non-root, port 8080, gzip and cache/security headers. |
