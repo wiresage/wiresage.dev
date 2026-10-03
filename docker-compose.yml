@@ -1,4 +1,4 @@
-# docker compose up -d --build   ->   http://localhost:8080
+# docker compose up -d --build   ->   http://localhost:8089
 # Another host port: PORT=9000 docker compose up -d
 name: wiresage-dev
 

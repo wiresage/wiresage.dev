@@ -29,7 +29,7 @@ python -m http.server 8000
 ## Docker
 
 ```sh
-docker compose up -d --build   # http://localhost:8080
+docker compose up -d --build   # http://localhost:8089
 docker compose down
 ```
 
@@ -37,7 +37,7 @@ Another host port: `PORT=9000 docker compose up -d`. Without Compose:
 
 ```sh
 docker build -t wiresage-dev .
-docker run --rm -p 8080:8080 wiresage-dev
+docker run --rm -p 8089:8080 wiresage-dev
 ```
 
 ## Deploy
